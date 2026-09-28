@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://5ek0tov06bgy"]
+
+[ext_resource type="Script" uid="uid://js31bwkt65nj" path="res://debug/flora/flora_multimesh_gallery.gd" id="1_gallery"]
+
+[sub_resource type="Environment" id="Environment_gallery"]
+background_mode = 1
+background_color = Color(0.006, 0.025, 0.04, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.18, 0.42, 0.52, 1)
+ambient_light_energy = 0.78
+reflected_light_source = 2
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Material_floor"]
+albedo_color = Color(0.035, 0.09, 0.085, 1)
+roughness = 0.96
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("Material_floor")
+size = Vector2(32, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
+bg_color = Color(0.01, 0.025, 0.04, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.15, 0.42, 0.5, 0.75)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="FloraMultiMeshGallery" type="Node3D" unique_id=960821402]
+script = ExtResource("1_gallery")
+
+[node name="GalleryEnvironment" type="WorldEnvironment" parent="." unique_id=1986969589]
+environment = SubResource("Environment_gallery")
+
+[node name="FloraRoot" type="Node3D" parent="." unique_id=219554001]
+unique_name_in_owner = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=1514096786]
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="." unique_id=1623951662]
+transform = Transform3D(0.88294756, 0.3488854, -0.3141378, 0, 0.66913056, 0.74314487, 0.46947157, -0.656158, 0.5908072, 0, 0, 0)
+light_color = Color(0.72, 0.9, 1, 1)
+light_energy = 1.55
+shadow_enabled = true
+
+[node name="FillLight" type="OmniLight3D" parent="." unique_id=1731326216]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 6, 7)
+light_color = Color(0.25, 0.68, 0.82, 1)
+light_energy = 8.0
+omni_range = 20.0
+
+[node name="WarmLight" type="OmniLight3D" parent="." unique_id=491265235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 4, 5)
+light_color = Color(0.76, 0.38, 0.22, 1)
+light_energy = 4.5
+omni_range = 16.0
+
+[node name="GalleryCamera" type="Camera3D" parent="." unique_id=309734811]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 27)
+current = true
+fov = 57.0
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=1502454725]
+
+[node name="MarginContainer" type="MarginContainer" parent="Interface" unique_id=195589427]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 112.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+
+[node name="PanelContainer" type="PanelContainer" parent="Interface/MarginContainer" unique_id=699499209]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="StatusLabel" type="Label" parent="Interface/MarginContainer/PanelContainer" unique_id=806285092]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "Stage 10E Flora MultiMesh Gallery"
+horizontal_alignment = 1
+vertical_alignment = 1

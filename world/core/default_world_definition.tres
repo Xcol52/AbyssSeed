@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="WorldDefinition" format=3 uid="uid://bbaepkfi4qbas"]
+
+[ext_resource type="Script" uid="uid://del7aecomp1wn" path="res://world/core/world_definition.gd" id="1_definition"]
+[ext_resource type="Resource" uid="uid://b3tbqfhj7djun" path="res://world/ocean/default_ocean_settings.tres" id="2_ocean"]
+[ext_resource type="Resource" uid="uid://ilp8gccnjskl" path="res://world/coordinates/default_world_grid_settings.tres" id="3_grid"]
+[ext_resource type="Resource" uid="uid://dkio6mvkmwo05" path="res://world/terrain/default_terrain_settings.tres" id="4_terrain"]
+[ext_resource type="Resource" uid="uid://ccjamhm1fpm1x" path="res://world/geology/default_geology_settings.tres" id="5_geology"]
+[ext_resource type="Resource" uid="uid://k6vgp3i1f3vi" path="res://world/chunks/default_chunk_streaming_settings.tres" id="6_streaming"]
+[ext_resource type="Resource" uid="uid://dplty6128gqxo" path="res://world/generation/async/default_chunk_generation_settings.tres" id="7_generation"]
+[ext_resource type="Resource" uid="uid://dsr1scpiqgp28" path="res://world/environment/default_environment_settings.tres" id="8_environment"]
+
+[resource]
+resource_name = "Default World Definition"
+script = ExtResource("1_definition")
+generation_version = 9
+ocean_settings = ExtResource("2_ocean")
+grid_settings = ExtResource("3_grid")
+terrain_settings = ExtResource("4_terrain")
+geology_settings = ExtResource("5_geology")
+environment_settings = ExtResource("8_environment")
+chunk_streaming_settings = ExtResource("6_streaming")
+chunk_generation_settings = ExtResource("7_generation")

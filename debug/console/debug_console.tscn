@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://br8kufw4bqsjc"]
+
+[ext_resource type="Script" uid="uid://wfddeh5or8dn" path="res://debug/console/debug_console.gd" id="1_console"]
+
+[node name="DebugConsole" type="CanvasLayer" unique_id=1996687171]
+layer = 100
+visible = false
+script = ExtResource("1_console")
+
+[node name="ConsoleMargin" type="MarginContainer" parent="." unique_id=1759281304]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 684.0
+offset_bottom = 284.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ConsoleLayout" type="VBoxContainer" parent="ConsoleMargin" unique_id=837876712]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="CommandHistory" type="RichTextLabel" parent="ConsoleMargin/ConsoleLayout" unique_id=1278934759]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(620, 200)
+layout_mode = 2
+size_flags_vertical = 3
+focus_mode = 2
+text = "Ocean World debug console
+Enter /help for available commands.
+"
+scroll_following = true
+selection_enabled = true
+
+[node name="CommandInput" type="LineEdit" parent="ConsoleMargin/ConsoleLayout" unique_id=1790681925]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(620, 36)
+layout_mode = 2
+placeholder_text = "/help"
+keep_editing_on_text_submit = true
+clear_button_enabled = true

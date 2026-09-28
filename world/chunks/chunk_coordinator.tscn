@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://world/chunks/chunk_coordinator.gd" id="1_coordinator"]
+[ext_resource type="PackedScene" path="res://world/chunks/world_chunk.tscn" id="2_chunk"]
+
+[node name="ChunkCoordinator" type="Node"]
+script = ExtResource("1_coordinator")
+world_chunk_scene = ExtResource("2_chunk")

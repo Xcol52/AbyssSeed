@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://cr1wjbf5sx0ie"]
+
+[ext_resource type="Script" uid="uid://dex6kb6sm8nwt" path="res://debug/geology/geology_debug_map.gd" id="1_map"]
+[ext_resource type="Resource" uid="uid://ccjamhm1fpm1x" path="res://world/geology/default_geology_settings.tres" id="2_geology"]
+[ext_resource type="Resource" uid="uid://dkio6mvkmwo05" path="res://world/terrain/default_terrain_settings.tres" id="3_terrain"]
+
+[node name="GeologyDebugMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_map")
+geology_settings = ExtResource("2_geology")
+terrain_settings = ExtResource("3_terrain")
+generation_version = 7
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.006, 0.009, 0.014, 1)
+
+[node name="Layout" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="ModeLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+text = "Generating terrain and geology..."
+
+[node name="StatsLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 116)
+layout_mode = 2
+mouse_filter = 2
+text = "Analyzing terrain and geology..."
+autowrap_mode = 2
+
+[node name="MapTexture" type="TextureRect" parent="Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HelpLabel" type="Label" parent="Layout"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+text = "WASD: pan | Shift+WASD: fast pan | Q/E or wheel: zoom | Home: origin | Left/Right/Tab: mode | G: macro | T: micro"
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ct5mu58lxbhe"]
+
+[ext_resource type="Script" uid="uid://luca0bfmu5ud" path="res://world/fauna/runtime/fauna_generation_bridge.gd" id="1_bridge"]
+
+[node name="FaunaGenerationBridge" type="Node" unique_id=657911522]
+script = ExtResource("1_bridge")

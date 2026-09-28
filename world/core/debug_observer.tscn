@@ -1,0 +1,16 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://dcs20td4q8jxs" path="res://debug/observer/debug_observer.gd" id="1_observer"]
+
+[node name="DebugObserver" type="Node3D"]
+script = ExtResource("1_observer")
+
+[node name="PitchPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
+rotation = Vector3(-0.349066, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="PitchPivot"]
+current = true
+near = 0.05
+far = 900.0
+fov = 70.0

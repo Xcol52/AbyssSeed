@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://io61s2sealq"]
+
+[ext_resource type="Script" uid="uid://c6awia8bbw5jg" path="res://world/fauna/runtime/fauna_coordinator.gd" id="1_coordinator"]
+
+[node name="FaunaCoordinator" type="Node" unique_id=1638126737]
+script = ExtResource("1_coordinator")

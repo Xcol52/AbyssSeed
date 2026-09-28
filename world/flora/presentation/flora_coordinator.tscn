@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://world/flora/presentation/flora_coordinator.gd" id="1_coordinator"]
+
+[node name="FloraCoordinator" type="Node"]
+script = ExtResource("1_coordinator")
+maximum_concurrent_jobs = 1
+maximum_pending_requests = 32
+maximum_completed_results = 8
+maximum_generation_ring = 3
+maximum_presentation_ring = 3
+full_density_ring = 1
+middle_ring_divisor = 2
+outer_ring_divisor = 4
+presentation_budget_usec = 1500
+maximum_presentation_work_items = 192
+maximum_multimesh_allocations = 1
+visual_distance_chunks = 0.0
+print_chunk_counts = false

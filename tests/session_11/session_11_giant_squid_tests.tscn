@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d4d55uaqhtin0"]
+
+[ext_resource type="Script" uid="uid://b582ccwetswc0" path="res://tests/session_11/session_11_giant_squid_tests.gd" id="1_tests"]
+[ext_resource type="Script" uid="uid://gj2tkshrwy23" path="res://world/fauna/apex/giant_squid_coordinator.gd" id="2_coordinator"]
+
+[node name="Session11GiantSquidTests" type="Node" unique_id=1217479056]
+script = ExtResource("1_tests")
+
+[node name="Observer" type="Node3D" parent="." unique_id=479350702]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1000, -100)
+
+[node name="PresentationRoot" type="Node3D" parent="." unique_id=1473791937]
+unique_name_in_owner = true
+
+[node name="Coordinator" type="Node" parent="." unique_id=1917612968]
+unique_name_in_owner = true
+script = ExtResource("2_coordinator")
+activation_check_interval = 0.05

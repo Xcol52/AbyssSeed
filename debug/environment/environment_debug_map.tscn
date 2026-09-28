@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://r0d6rm44qqrf"]
+
+[ext_resource type="Script" uid="uid://bhmg8bfgfrfd5" path="res://debug/environment/environment_debug_map.gd" id="1_map"]
+[ext_resource type="Resource" uid="uid://ccjamhm1fpm1x" path="res://world/geology/default_geology_settings.tres" id="2_geology"]
+[ext_resource type="Resource" uid="uid://dkio6mvkmwo05" path="res://world/terrain/default_terrain_settings.tres" id="3_terrain"]
+[ext_resource type="Resource" uid="uid://dsr1scpiqgp28" path="res://world/environment/default_environment_settings.tres" id="4_environment"]
+
+[node name="EnvironmentDebugMap" type="Control" unique_id=1673069597]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_map")
+geology_settings = ExtResource("2_geology")
+terrain_settings = ExtResource("3_terrain")
+environment_settings = ExtResource("4_environment")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1009131153]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.004, 0.007, 0.012, 1)
+
+[node name="Layout" type="VBoxContainer" parent="." unique_id=1540144762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="ModeLabel" type="Label" parent="Layout" unique_id=1291657119]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Generating environmental samples..."
+autowrap_mode = 2
+
+[node name="StatsLabel" type="Label" parent="Layout" unique_id=42538972]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "Preparing environmental debug map..."
+autowrap_mode = 2
+
+[node name="MapTexture" type="TextureRect" parent="Layout" unique_id=2065855076]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="InspectionLabel" type="Label" parent="Layout" unique_id=1140928591]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 122)
+layout_mode = 2
+text = "Left click the map to inspect a sample."
+autowrap_mode = 2
+
+[node name="HelpLabel" type="Label" parent="Layout" unique_id=1791677148]
+unique_name_in_owner = true
+layout_mode = 2
+text = "WASD: pan | Shift+WASD: fast pan | Q/E or wheel: zoom | Home: origin | Left/Right/Tab: mode | R: regenerate | Left click: inspect"
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dd8xil0tcwwd3"]
+
+[ext_resource type="Script" uid="uid://db1q0tbpocq7x" path="res://debug/flora/kelp_variation_test.gd" id="1_test"]
+
+[sub_resource type="Environment" id="Environment_test"]
+background_mode = 1
+background_color = Color(0.006, 0.025, 0.045, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.19, 0.33, 0.42, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 2
+tonemap_mode = 2
+
+[node name="KelpVariationTest" type="Node3D" unique_id=1031890216]
+script = ExtResource("1_test")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=583913608]
+environment = SubResource("Environment_test")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1149343346]
+transform = Transform3D(0.88294756, 0.36994863, -0.2890356, 0, 0.6156615, 0.7880107, 0.46947157, -0.6957722, 0.5435968, 0, 0, 0)
+light_color = Color(0.76, 0.9, 1, 1)
+light_energy = 1.8
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=354667214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 31)
+current = true
+fov = 70.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1745248067]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=1368415989]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 760.0
+offset_bottom = 440.0
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/MarginContainer" unique_id=1817875534]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.97, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 17
+text = "Running kelp variation test..."

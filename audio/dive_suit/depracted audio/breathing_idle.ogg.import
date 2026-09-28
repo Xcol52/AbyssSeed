@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://m8ftw4b58mq2"
+path="res://.godot/imported/breathing_idle.ogg-e8359b8840b85c45d17a73c040a2dc80.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/dive_suit/depracted audio/breathing_idle.ogg"
+dest_files=["res://.godot/imported/breathing_idle.ogg-e8359b8840b85c45d17a73c040a2dc80.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

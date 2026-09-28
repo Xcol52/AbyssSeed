@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://world/ocean/ocean_surface.gd" id="1_surface"]
+[ext_resource type="Shader" path="res://shaders/ocean.gdshader" id="2_ocean_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ocean"]
+resource_name = "Infinite Ocean Surface Material"
+shader = ExtResource("2_ocean_shader")
+shader_parameter/wave_direction_a = Vector2(0.82, 0.57)
+shader_parameter/wave_length_a = 112.0
+shader_parameter/wave_amplitude_a = 0.72
+shader_parameter/wave_speed_a = 0.42
+shader_parameter/wave_steepness_a = 0.58
+shader_parameter/wave_phase_a = 0.0
+shader_parameter/wave_direction_b = Vector2(-0.36, 0.93)
+shader_parameter/wave_length_b = 64.0
+shader_parameter/wave_amplitude_b = 0.38
+shader_parameter/wave_speed_b = 0.68
+shader_parameter/wave_steepness_b = 0.46
+shader_parameter/wave_phase_b = 1.73
+shader_parameter/wave_direction_c = Vector2(0.94, -0.34)
+shader_parameter/wave_length_c = 40.0
+shader_parameter/wave_amplitude_c = 0.16
+shader_parameter/wave_speed_c = 1.05
+shader_parameter/wave_steepness_c = 0.32
+shader_parameter/wave_phase_c = 3.91
+shader_parameter/shallow_threshold = 20.0
+shader_parameter/maximum_extinction_depth = 350.0
+shader_parameter/shallow_color = Color(0.045, 0.4, 0.52, 0.12)
+shader_parameter/deep_color = Color(0.018, 0.05, 0.075, 0.42)
+shader_parameter/foam_color = Color(0.64, 0.94, 0.88, 0.94)
+shader_parameter/foam_depth = 3.0
+shader_parameter/foam_scale = 0.18
+shader_parameter/foam_speed = 0.32
+shader_parameter/fresnel_power = 4.5
+shader_parameter/grazing_alpha = 0.97
+shader_parameter/downward_roughness = 0.06
+shader_parameter/grazing_roughness = 0.22
+
+[node name="OceanSurface" type="Node3D"]
+script = ExtResource("1_surface")
+
+[node name="OceanMesh" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+layers = 2
+material_override = SubResource("ShaderMaterial_ocean")
+cast_shadow = 0

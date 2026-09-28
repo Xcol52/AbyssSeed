@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ChunkStreamingSettings" format=3 uid="uid://k6vgp3i1f3vi"]
+
+[ext_resource type="Script" uid="uid://ddyeeub6majwm" path="res://world/chunks/chunk_streaming_settings.gd" id="1_settings"]
+
+[resource]
+resource_name = "Default Chunk Streaming Settings"
+script = ExtResource("1_settings")
+load_radius = 4
+unload_radius = 5
+metadata/_custom_type_script = "uid://del7aecomp1wn"

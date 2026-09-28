@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://ca7jy25ud58qi"]
+
+[ext_resource type="Script" uid="uid://b7c6pkgu4j2dt" path="res://tests/session_11/session_11_stage_11a_fauna_tests.gd" id="1_tests"]
+[ext_resource type="Script" uid="uid://c6awia8bbw5jg" path="res://world/fauna/runtime/fauna_coordinator.gd" id="2_coordinator"]
+
+[node name="Session11Stage11AFaunaTests" type="Node" unique_id=563700693]
+script = ExtResource("1_tests")
+
+[node name="Observer" type="Node3D" parent="." unique_id=892183140]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70, -15, 70)
+
+[node name="PresentationRoot" type="Node3D" parent="." unique_id=231624782]
+unique_name_in_owner = true
+
+[node name="FaunaCoordinator" type="Node" parent="." unique_id=1274495663]
+unique_name_in_owner = true
+script = ExtResource("2_coordinator")
+activation_distance = 300.0
+deactivation_distance = 360.0
+maximum_active_schools = 8
+maximum_active_individuals = 32
+simulation_hz = null
+activation_check_interval = 0.05

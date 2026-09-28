@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="OceanSettings" format=3 uid="uid://b3tbqfhj7djun"]
+
+[ext_resource type="Script" uid="uid://dj3ldrcubcfe0" path="res://world/ocean/ocean_settings.gd" id="1_settings"]
+
+[resource]
+resource_name = "Default Ocean Settings"
+script = ExtResource("1_settings")
+metadata/_custom_type_script = "uid://del7aecomp1wn"

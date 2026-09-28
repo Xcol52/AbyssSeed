@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://s2ychbm4mhav"]
+
+[ext_resource type="Script" uid="uid://td1xx5uwb71p" path="res://debug/flora/flora_model_gallery.gd" id="1_gallery"]
+
+[sub_resource type="Environment" id="Environment_gallery"]
+background_mode = 1
+background_color = Color(0.008, 0.035, 0.055, 1)
+ambient_light_source = 3
+ambient_light_color = Color(0.2, 0.42, 0.52, 1)
+ambient_light_energy = 0.72
+reflected_light_source = 2
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Material_floor"]
+albedo_color = Color(0.025, 0.075, 0.085, 1)
+metallic = 0.05
+roughness = 0.93
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_floor"]
+material = SubResource("Material_floor")
+size = Vector2(30, 15)
+
+[sub_resource type="StandardMaterial3D" id="Material_backdrop"]
+albedo_color = Color(0.012, 0.052, 0.075, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_backdrop"]
+material = SubResource("Material_backdrop")
+size = Vector2(30, 11)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_panel"]
+bg_color = Color(0.01, 0.025, 0.04, 0.88)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.15, 0.42, 0.5, 0.75)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="FloraModelGallery" type="Node3D" unique_id=981387032]
+script = ExtResource("1_gallery")
+
+[node name="GalleryEnvironment" type="WorldEnvironment" parent="." unique_id=1265699677]
+environment = SubResource("Environment_gallery")
+
+[node name="ModelsRoot" type="Node3D" parent="." unique_id=1780682247]
+unique_name_in_owner = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=368025194]
+mesh = SubResource("PlaneMesh_floor")
+
+[node name="Backdrop" type="MeshInstance3D" parent="." unique_id=1624405909]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 4.5, -3.8)
+mesh = SubResource("QuadMesh_backdrop")
+
+[node name="KeyLight" type="DirectionalLight3D" parent="." unique_id=104011202]
+transform = Transform3D(0.8480481, 0.3938068, -0.35458517, 0, 0.66913056, 0.74314487, 0.52991927, -0.63022256, 0.5674549, 0, 0, 0)
+light_color = Color(0.72, 0.9, 1, 1)
+light_energy = 1.45
+shadow_enabled = true
+
+[node name="FillLight" type="OmniLight3D" parent="." unique_id=1093746693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 4.5, 5)
+light_color = Color(0.25, 0.72, 0.82, 1)
+light_energy = 7.0
+omni_range = 16.0
+
+[node name="WarmLight" type="OmniLight3D" parent="." unique_id=1643726845]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 3, 3)
+light_color = Color(0.78, 0.38, 0.24, 1)
+light_energy = 4.0
+omni_range = 12.0
+
+[node name="GalleryCamera" type="Camera3D" parent="." unique_id=2095065784]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8, 23)
+current = true
+fov = 58.0
+
+[node name="Interface" type="CanvasLayer" parent="." unique_id=176349247]
+
+[node name="MarginContainer" type="MarginContainer" parent="Interface" unique_id=550132594]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 18
+
+[node name="PanelContainer" type="PanelContainer" parent="Interface/MarginContainer" unique_id=1529872128]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBox_panel")
+
+[node name="StatusLabel" type="Label" parent="Interface/MarginContainer/PanelContainer" unique_id=1779506864]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 78)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.88, 0.97, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "Procedural Flora Model Gallery"
+horizontal_alignment = 1
+vertical_alignment = 1

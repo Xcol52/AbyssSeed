@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bcuu5o6of8018"]
+
+[ext_resource type="Script" uid="uid://b33054ghj34oo" path="res://world/core/ocean_world.gd" id="1_world"]
+[ext_resource type="PackedScene" uid="uid://dn7ib8urvaykd" path="res://world/ocean/ocean_surface.tscn" id="2_ocean_surface"]
+[ext_resource type="PackedScene" path="res://world/chunks/chunk_coordinator.tscn" id="3_coordinator"]
+[ext_resource type="Script" uid="uid://ikylp7pxbb4g" path="res://world/environment/ocean_environment.gd" id="3_yii7h"]
+[ext_resource type="Environment" path="res://world/environment/underwater_environment.tres" id="4_environment"]
+[ext_resource type="PackedScene" path="res://world/flora/presentation/flora_coordinator.tscn" id="5_flora_coordinator"]
+[ext_resource type="PackedScene" path="res://world/fauna/runtime/fauna_generation_bridge.tscn" id="5_qek20"]
+[ext_resource type="PackedScene" uid="uid://io61s2sealq" path="res://world/fauna/runtime/fauna_coordinator.tscn" id="6_swfxy"]
+[ext_resource type="PackedScene" uid="uid://61udfgybtv41" path="res://world/fauna/apex/giant_squid_coordinator.tscn" id="7_bte0i"]
+[node name="OceanWorld" type="Node" unique_id=2071351934]
+script = ExtResource("1_world")
+
+[node name="SystemsRoot" type="Node" parent="." unique_id=2001016965]
+
+[node name="UnderwaterEnvironment" type="WorldEnvironment" parent="SystemsRoot" unique_id=1421598820]
+environment = ExtResource("4_environment")
+script = ExtResource("3_yii7h")
+
+[node name="Sun" type="DirectionalLight3D" parent="SystemsRoot"]
+rotation_degrees = Vector3(-45, 0, 0)
+shadow_enabled = false
+light_energy = 0.0
+shape = 4
+
+[node name="ChunkCoordinator" parent="SystemsRoot" unique_id=837972936 instance=ExtResource("3_coordinator")]
+
+[node name="FloraCoordinator" parent="SystemsRoot" unique_id=381918020 instance=ExtResource("5_flora_coordinator")]
+
+[node name="FaunaGenerationBridge" parent="SystemsRoot" unique_id=317382790 instance=ExtResource("5_qek20")]
+
+[node name="FaunaCoordinator" parent="SystemsRoot" unique_id=1638126737 instance=ExtResource("6_swfxy")]
+
+[node name="GiantSquidCoordinator" parent="SystemsRoot" unique_id=59349763 instance=ExtResource("7_bte0i")]
+
+[node name="WorldContent" type="Node3D" parent="." unique_id=447590010]
+
+[node name="StreamedChunksRoot" type="Node3D" parent="WorldContent" unique_id=238118135]
+
+[node name="FloraRoot" type="Node3D" parent="WorldContent" unique_id=1805973690]
+
+[node name="OceanRoot" type="Node3D" parent="WorldContent" unique_id=2023203302]
+
+[node name="OceanSurface" parent="WorldContent/OceanRoot" unique_id=1841159056 instance=ExtResource("2_ocean_surface")]
+
+[node name="DynamicEntitiesRoot" type="Node3D" parent="WorldContent" unique_id=1034111688]

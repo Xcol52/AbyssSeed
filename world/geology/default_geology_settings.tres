@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="GeologySettings" format=3 uid="uid://ccjamhm1fpm1x"]
+
+[ext_resource type="Script" uid="uid://bj8kbohktitsl" path="res://world/geology/geology_settings.gd" id="1_geology"]
+
+[resource]
+resource_name = "Default Geology Settings"
+script = ExtResource("1_geology")
+plate_cell_size = 16384.0
+major_trench_width_multiplier = 1.6
+extreme_trench_width_multiplier = 2.4
+extreme_trench_floor_fraction = 0.4
+trench_depth_variation_strength = 0.05
+metadata/_custom_type_script = "uid://del7aecomp1wn"

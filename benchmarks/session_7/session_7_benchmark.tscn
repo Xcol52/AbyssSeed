@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d1avsaajc8fb4"]
+
+[ext_resource type="Script" uid="uid://xcxxtaa6neek" path="res://benchmarks/session_7/session_7_benchmark_runner.gd" id="1_runner"]
+[ext_resource type="PackedScene" path="res://app/main.tscn" id="2_runtime"]
+
+[node name="Session7Benchmark" type="Node" unique_id=1779411005]
+script = ExtResource("1_runner")
+
+[node name="Runtime" parent="." unique_id=786569198 instance=ExtResource("2_runtime")]
+enable_depth_gauge = false

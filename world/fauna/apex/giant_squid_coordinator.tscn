@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://61udfgybtv41"]
+
+[ext_resource type="Script" uid="uid://gj2tkshrwy23" path="res://world/fauna/apex/giant_squid_coordinator.gd" id="1_coordinator"]
+
+[node name="GiantSquidCoordinator" type="Node" unique_id=59349763]
+script = ExtResource("1_coordinator")

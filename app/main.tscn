@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://hvdusdw4l86e"]
+
+[ext_resource type="Script" uid="uid://becaom8tba2dc" path="res://app/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://world/core/ocean_world.tscn" id="2_8bux2"]
+[ext_resource type="Resource" uid="uid://bbaepkfi4qbas" path="res://world/core/default_world_definition.tres" id="3_definition"]
+[ext_resource type="PackedScene" uid="uid://cioxw1xe81f6e" path="res://player/dive_suit/atmospheric_dive_suit.tscn" id="4_observer"]
+
+[node name="Main" type="Node" unique_id=101543199]
+script = ExtResource("1_main")
+world_scene = ExtResource("2_8bux2")
+world_definition = ExtResource("3_definition")
+observer_path = NodePath("AtmosphericDiveSuit")
+enable_depth_gauge = false
+
+[node name="AtmosphericDiveSuit" parent="." unique_id=2009019115 instance=ExtResource("4_observer")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 40)

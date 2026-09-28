@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TerrainSettings" format=3 uid="uid://dkio6mvkmwo05"]
+
+[ext_resource type="Script" uid="uid://bqcj8rywxjlgg" path="res://world/terrain/terrain_settings.gd" id="1_terrain"]
+
+[resource]
+resource_name = "Default Terrain Settings"
+script = ExtResource("1_terrain")
+metadata/_custom_type_script = "uid://del7aecomp1wn"

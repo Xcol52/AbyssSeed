@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="EnvironmentSettings" format=3 uid="uid://dsr1scpiqgp28"]
+
+[ext_resource type="Script" uid="uid://d0vytdobq4708" path="res://world/environment/environment_settings.gd" id="1_environment"]
+
+[resource]
+resource_name = "Default Environment Settings"
+script = ExtResource("1_environment")
+metadata/_custom_type_script = "uid://del7aecomp1wn"

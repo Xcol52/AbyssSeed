@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://world/fauna/runtime/fauna_generation_bridge.gd" id="1_bridge"]
+
+[node name="FaunaGenerationBridge" type="Node"]
+script = ExtResource("1_bridge")
+max_chunk_generations_per_frame = 1
+print_chunk_counts = false

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChunkGenerationSettings" format=3 uid="uid://dplty6128gqxo"]
+
+[ext_resource type="Script" uid="uid://b7tg53qip6yer" path="res://world/generation/async/chunk_generation_settings.gd" id="1_settings"]
+
+[resource]
+resource_name = "Default Chunk Generation Settings"
+script = ExtResource("1_settings")
+background_workers_enabled = true
+metadata/_custom_type_script = "uid://del7aecomp1wn"

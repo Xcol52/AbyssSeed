@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bpirot6s820gh"]
+
+[ext_resource type="Script" uid="uid://bmgi1pgrdcdfv" path="res://debug/camera/debug_camera.gd" id="1_camera"]
+
+[node name="DebugCamera" type="Node3D" unique_id=214584948]
+script = ExtResource("1_camera")
+
+[node name="PitchPivot" type="Node3D" parent="." unique_id=2110837958]
+unique_name_in_owner = true
+
+[node name="Camera3D" type="Camera3D" parent="PitchPivot" unique_id=717620676]
+unique_name_in_owner = true
+fov = 70.0
+far = 900.0
+
+[node name="DebugFlashlight" type="SpotLight3D" parent="PitchPivot/Camera3D" unique_id=571788222]
+unique_name_in_owner = true
+light_color = Color(0.72, 0.87, 1, 1)
+light_energy = 4.0
+light_indirect_energy = 0.0
+light_specular = 0.35
+light_cull_mask = 1
+shadow_enabled = true
+spot_range = 55.0
+spot_angle = 22.0
+spot_angle_attenuation = 1.6

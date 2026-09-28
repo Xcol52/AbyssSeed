@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="WorldGridSettings" format=3 uid="uid://ilp8gccnjskl"]
+
+[ext_resource type="Script" uid="uid://b1ivkrtb1vu85" path="res://world/coordinates/world_grid_settings.gd" id="1_grid"]
+
+[resource]
+resource_name = "Default World Grid Settings"
+script = ExtResource("1_grid")
+metadata/_custom_type_script = "uid://del7aecomp1wn"

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://by60fb6hnh7ar"]
+
+[ext_resource type="Script" uid="uid://ci0vkv5vrc0b8" path="res://world/lighting/depth_lighting_controller.gd" id="1_controller"]
+
+[node name="DepthLightingController" type="Node" unique_id=1462611164]
+script = ExtResource("1_controller")
